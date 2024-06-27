@@ -4,7 +4,7 @@
   "description": "automation with bdd",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test"
+    "test": "cucumber-js test & npx ts-node"
   },
   "keywords": [
     "pw",
@@ -21,5 +21,8 @@
     "playwright": "^1.44.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }

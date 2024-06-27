@@ -20,6 +20,15 @@
 
     "cardCvv": {
         "locator": "xpath=//div[@class='col _s6 _m6 _l6 m-mb20']//input[@type='text']"
+    },
+
+    "customerName":{
+        "locator": "//input[@id='profile-name-input']"
+    },
+
+    "customerSurname":{
+        "locator": "//input[@id='profile-surname-input']"
     }
+
 
 }

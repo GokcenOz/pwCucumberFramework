@@ -1,13 +1,16 @@
 import {Page} from "playwright";
 import * as paymentPageLoc from "../locators/paymentpageloc.json";
 import BasePage from "../pages/basepage";
+import { ICreateAttachment, ICreateLog } from "@cucumber/cucumber/lib/runtime/attachment_manager";
+import { faker } from '@faker-js/faker';
+
 
 
 
 export default class PaymentPage extends BasePage{
 
-    constructor(page: Page){
-        super(page);
+    constructor(page: Page,log: ICreateAttachment){
+        super(page, log);
     }
 
 
@@ -27,4 +30,10 @@ export default class PaymentPage extends BasePage{
         await this.click(paymentPageLoc.paymentButton);
         //await this.page.locator(paymentPageLoc.paymentButton.locator).click();
     }
+
+    async enterRandomNameSurname(){
+        await this.enterRandomValue(paymentPageLoc.customerName);
+        await this.enterRandomValue(paymentPageLoc.customerSurname);
+    }
+
 }

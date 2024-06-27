@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<testsuite failures="0" skipped="0" name="cucumber-js" time="7.318881598000001" tests="2">
+  <testcase classname="test payment page functionality" name="User enter invalid values and get input error" time="3.652810025">
+    <system-out><![CDATA[Given User is on payment page.............................................passed
+When User enter user email as "aa@com"....................................passed
+When User enter amount as 40..............................................passed
+Then Verify "//span[.='Please type a valid email address']" is visible....passed
+When User enter user email as "aa@a.comx".................................passed
+Then User enter credit card details.......................................passed
+And User click payment button.............................................passed
+Then Verify "//input[@id='profile-name-input']//following::span[1]" is ...passed
+Then Verify "//input[@id='profile-surname-input']//following::span[1]" ...passed
+When Clear "//input[@id='amount-input']" input............................passed
+Then Verify "//input[@id='amount-input']//following::span[1]" is visibl...passed
+When User enter amount as 0...............................................passed
+Then Verify "//input[@id='amount-input']//following::span[1]" is visibl...passed
+When Clear "//input[@id='amount-input']" input............................passed
+When User enter amount as 74..............................................passed
+When User enter name and surname randomly.................................passed
+Then Verify "Please type a value" text value is not visible...............passed]]></system-out>
+  </testcase>
+  <testcase classname="test payment page functionality" name="When User click garanti pay button without user details should be able to see error msg" time="3.6660715730000004">
+    <system-out><![CDATA[Given User is on payment page.............................................passed
+When User click garanti pay button........................................passed
+And User click payment button garanti pay.................................passed
+Then Verify "//div[@class='simprakit-dialog-title danger']" is visible....passed]]></system-out>
+  </testcase>
+</testsuite>
