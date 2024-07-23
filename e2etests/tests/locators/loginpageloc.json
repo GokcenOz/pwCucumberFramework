@@ -1,0 +1,17 @@
+{
+    "userName" : {
+        "locator" : "id=login-email"
+    },
+
+    "password" : {
+        "locator" : "id=login-password"
+    },
+
+    "loginButton" : {
+        "locator" : "id=sign-in-login-button"
+    },
+
+    "forgotPasswprd" : {
+        "locator" : "xpath=//span[@class='forgot-password']"
+    }
+}

@@ -1,25 +1,21 @@
 {
-  "name": "pwtest",
+  "name": "e2etests",
   "version": "1.0.0",
-  "description": "automation with bdd",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js test"
   },
-  "keywords": [
-    "pw",
-    "ts",
-    "js"
-  ],
-  "author": "Gokcen",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^10.8.0",
-    "@playwright/test": "^1.44.1",
-    "cucumber-html-reporter": "^7.1.1",
-    "dotenv": "^16.4.5",
-    "playwright": "^1.44.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "@playwright/test": "^1.45.2",
+    "@types/node": "^20.14.9",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }

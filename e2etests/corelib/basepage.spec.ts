@@ -1,5 +1,5 @@
 
-import { Given, When, Then, setDefaultTimeout, Before, After } from "@cucumber/cucumber";
+import { Given, When, Then, setDefaultTimeout, Before, After, AfterAll, Status, World } from "@cucumber/cucumber";
 import { Browser, BrowserContext, Page, chromium } from "playwright";
 import { expect } from "@playwright/test";
 
@@ -16,16 +16,20 @@ Before(async function () {
 
 });
 
+After(async function (this: World, scenario) {
+  if (scenario.result?.status === Status.FAILED) {
+    await page.screenshot({path:"Register.png"});
+    
+  }
+  await page.close();
+});
 
 
+AfterAll(async function () {
+  await browser.close();
+})
 
-//After(async function () {
-  //   await page.close();
-  //   await bCtx.close();
-  //   await browser.close();
- //  });
 
-  // export ( page );
 
   export function getPage(): Page{
     return page;
